@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (ayaya "ayaya_gui.cpp" "ayaya_gui.h")
+add_executable (ayaya "ayaya_gui.cpp" "ayaya_gui.h" "include/paint/color.h" "include/paint/rect.h" "include/paint/point.h" "include/paint/utils" "include/paint/key.h" "include/widget/widget.h")
 target_compile_features(ayaya PUBLIC cxx_std_17)
 
 find_package(OPENGL REQUIRED)

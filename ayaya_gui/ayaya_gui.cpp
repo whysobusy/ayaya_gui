@@ -26,7 +26,6 @@ int main() {
 
   sk_sp<SkImage> img(surface->makeImageSnapshot());
   sk_sp<SkData> png(img->encodeToData());
-
   SkFILEWStream out("output.png");
   out.write(png->data(), png->size());
 }
