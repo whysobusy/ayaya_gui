@@ -8,9 +8,12 @@ extern std::map<GLFWwindow*, Window*> windows;
 
 void WindowRefresh(GLFWwindow* window) {}
 
-Window::Window(char const* title, Point size, Color backGroundColor, App& app)
+Window::Window(char const* title,
+               double width,
+               double height,
+               Color backGroundColor)
     : backGroundColor_(backGroundColor) {
-  window_ = glfwCreateWindow(size.x, size.y, title, 0, 0);
+  window_ = glfwCreateWindow(width, height, title, 0, 0);
   if (window_ == 0) {
     glfwTerminate();
     return;

@@ -5,5 +5,7 @@
 #include "window.h"
 
 int main() {
-  return 0;
+  ayaya::App my_app;
+  ayaya::Window window("ayaya", 1000, 600, ayaya::Color::Blue());
+  my_app.Run();
 }

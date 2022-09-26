@@ -10,7 +10,7 @@
 namespace ayaya {
 class Window {
  public:
-  Window(char const* title, Point size, Color backGroundColor, App& app);
+  Window(char const* title, double width, double height, Color backGroundColor);
   ~Window();
 
   Window(Window const&) = delete;
