@@ -1,6 +1,8 @@
 #pragma once
 
 #include <GLFW/glfw3.h>
+#include "skia/core/SkSurface.h"
+#include "skia/gpu/GrDirectContext.h"
 
 #include "app.h"
 #include "paint/color.h"
@@ -23,5 +25,7 @@ class Window {
  private:
   Color backGroundColor_;
   GLFWwindow* window_;
+  GrDirectContext* skContext_;
+  SkSurface* skSurface_;
 };
 }  // namespace ayaya

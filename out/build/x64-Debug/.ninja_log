@@ -18,3 +18,10 @@
 0	192	6858916567032072	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/app.cpp.obj	db7aeee7ae747a4b
 193	232	6858916567430452	ayaya_gui/ayaya_gui.lib	df034072578aa241
 232	648	6858916568212148	test/example.exe	8614e76f0ddacb28
+4	844	6858929264417522	test/CMakeFiles/example.dir/ayaya_gui.cpp.obj	8980b72ae7e8d3eb
+7	853	6858929264487320	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/app.cpp.obj	db7aeee7ae747a4b
+5	533	6858933370988581	test/CMakeFiles/example.dir/ayaya_gui.cpp.obj	8980b72ae7e8d3eb
+5	920	6858943638484671	test/CMakeFiles/example.dir/ayaya_gui.cpp.obj	8980b72ae7e8d3eb
+2	634	6858946880256353	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/window.cpp.obj	274df9f4944c7da3
+644	694	6858946880849777	ayaya_gui/ayaya_gui.lib	df034072578aa241
+694	1881	6858946882700733	test/example.exe	8614e76f0ddacb28
