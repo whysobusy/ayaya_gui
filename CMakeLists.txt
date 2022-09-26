@@ -7,3 +7,6 @@ project ("ayaya_gui")
 
 # Include sub-projects.
 add_subdirectory ("ayaya_gui")
+
+# test app
+add_subdirectory ("test")

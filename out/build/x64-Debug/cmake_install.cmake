@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/cmake_install.cmake")
+  include("C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test/cmake_install.cmake")
 
 endif()
 

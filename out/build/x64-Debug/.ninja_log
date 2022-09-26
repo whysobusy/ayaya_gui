@@ -1,3 +1,12 @@
 # ninja log v5
 1	683	6857116165208071	ayaya_gui/CMakeFiles/ayaya.dir/ayaya_gui.cpp.obj	b69bbb2a3bd061dc
 690	1537	6857116166511425	ayaya_gui/ayaya.exe	b5789264253a3e5d
+156	202	6858905199995858	ayaya_gui/ayaya_gui.lib	df034072578aa241
+4	223	6858904870735061	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/window.cpp.obj	274df9f4944c7da3
+0	155	6858905199537107	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/paint/rect.cpp.obj	be16a5e9b5ba3281
+0	62	6858855330246828	ayaya_gui/CMakeFiles/example.dir/ayaya_gui.cpp.obj	746b45ceb1d75c40
+3	172	6858851046495585	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/app.cpp.obj	db7aeee7ae747a4b
+62	1145	6858855333858368	ayaya_gui/example.exe	3f16148a2898db9f
+7	65	6858904869159032	test/CMakeFiles/example.dir/ayaya_gui.cpp.obj	8980b72ae7e8d3eb
+202	990	6858905201355514	test/example.exe	8614e76f0ddacb28
+4	382	6858892874736269	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/paint/draw.cpp.obj	66424e7c1d5e4194

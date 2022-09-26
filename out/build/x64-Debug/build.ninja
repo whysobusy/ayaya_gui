@@ -74,42 +74,58 @@ build ayaya_gui\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
 build ayaya_gui\edit_cache: phony ayaya_gui\CMakeFiles\edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target ayaya
+# Object build statements for STATIC_LIBRARY target ayaya_gui
 
 
 #############################################
-# Order-only phony target for ayaya
+# Order-only phony target for ayaya_gui
 
-build cmake_object_order_depends_target_ayaya: phony || ayaya_gui\CMakeFiles\ayaya.dir
+build cmake_object_order_depends_target_ayaya_gui: phony || ayaya_gui\CMakeFiles\ayaya_gui.dir
 
-build ayaya_gui\CMakeFiles\ayaya.dir\ayaya_gui.cpp.obj: CXX_COMPILER__ayaya_Debug ..\..\..\ayaya_gui\ayaya_gui.cpp || cmake_object_order_depends_target_ayaya
+build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\rect.cpp.obj: CXX_COMPILER__ayaya_gui_Debug ..\..\..\ayaya_gui\src\paint\rect.cpp || cmake_object_order_depends_target_ayaya_gui
   DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
-  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya.dir
-  OBJECT_FILE_DIR = ayaya_gui\CMakeFiles\ayaya.dir
-  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya.dir\
-  TARGET_PDB = ayaya_gui\ayaya.pdb
+  INCLUDES = -I..\..\..\ayaya_gui\include -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
+  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
+  OBJECT_FILE_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint
+  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
+  TARGET_PDB = ayaya_gui\ayaya_gui.pdb
+
+build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\window.cpp.obj: CXX_COMPILER__ayaya_gui_Debug ..\..\..\ayaya_gui\src\window.cpp || cmake_object_order_depends_target_ayaya_gui
+  DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -I..\..\..\ayaya_gui\include -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
+  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
+  OBJECT_FILE_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir\src
+  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
+  TARGET_PDB = ayaya_gui\ayaya_gui.pdb
+
+build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\app.cpp.obj: CXX_COMPILER__ayaya_gui_Debug ..\..\..\ayaya_gui\src\app.cpp || cmake_object_order_depends_target_ayaya_gui
+  DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -I..\..\..\ayaya_gui\include -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
+  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
+  OBJECT_FILE_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir\src
+  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
+  TARGET_PDB = ayaya_gui\ayaya_gui.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target ayaya
+# Link build statements for STATIC_LIBRARY target ayaya_gui
 
 
 #############################################
-# Link the executable ayaya_gui\ayaya.exe
+# Link the static library ayaya_gui\ayaya_gui.lib
 
-build ayaya_gui\ayaya.exe: CXX_EXECUTABLE_LINKER__ayaya_Debug ayaya_gui\CMakeFiles\ayaya.dir\ayaya_gui.cpp.obj | C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\skia.dll.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = opengl32.lib  glu32.lib  C:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib  C:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\skia.dll.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya.dir
-  POST_BUILD = cmd.exe /C "cd /D C:\Users\zeqin\source\repos\ayaya_gui\out\build\x64-Debug\ayaya_gui && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/zeqin/Documents/c_plus/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/ayaya.exe -installedDir C:/Users/zeqin/Documents/c_plus/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
+build ayaya_gui\ayaya_gui.lib: CXX_STATIC_LIBRARY_LINKER__ayaya_gui_Debug ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\rect.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\window.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\app.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
+  POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya.dir\
-  TARGET_FILE = ayaya_gui\ayaya.exe
-  TARGET_IMPLIB = ayaya_gui\ayaya.lib
-  TARGET_PDB = ayaya_gui\ayaya.pdb
+  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
+  TARGET_FILE = ayaya_gui\ayaya_gui.lib
+  TARGET_PDB = ayaya_gui\ayaya_gui.pdb
 
 
 #############################################
@@ -124,11 +140,81 @@ build ayaya_gui\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build ayaya_gui\rebuild_cache: phony ayaya_gui\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/zeqin/source/repos/ayaya_gui/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target example
+
+
+#############################################
+# Order-only phony target for example
+
+build cmake_object_order_depends_target_example: phony || cmake_object_order_depends_target_ayaya_gui
+
+build test\CMakeFiles\example.dir\ayaya_gui.cpp.obj: CXX_COMPILER__example_Debug ..\..\..\test\ayaya_gui.cpp || cmake_object_order_depends_target_example
+  DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -I..\..\..\test\..\ayaya_gui\include -I..\..\..\ayaya_gui\include -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
+  OBJECT_DIR = test\CMakeFiles\example.dir
+  OBJECT_FILE_DIR = test\CMakeFiles\example.dir
+  TARGET_COMPILE_PDB = test\CMakeFiles\example.dir\
+  TARGET_PDB = test\example.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target example
+
+
+#############################################
+# Link the executable test\example.exe
+
+build test\example.exe: CXX_EXECUTABLE_LINKER__example_Debug test\CMakeFiles\example.dir\ayaya_gui.cpp.obj | ayaya_gui\ayaya_gui.lib C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\skia.dll.lib || ayaya_gui\ayaya_gui.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = ayaya_gui\ayaya_gui.lib  opengl32.lib  glu32.lib  C:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib  C:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\debug\lib\skia.dll.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = test\CMakeFiles\example.dir
+  POST_BUILD = cmd.exe /C "cd /D C:\Users\zeqin\source\repos\ayaya_gui\out\build\x64-Debug\test && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/zeqin/Documents/c_plus/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test/example.exe -installedDir C:/Users/zeqin/Documents/c_plus/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = test\CMakeFiles\example.dir\
+  TARGET_FILE = test\example.exe
+  TARGET_IMPLIB = test\example.lib
+  TARGET_PDB = test\example.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build test\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\zeqin\source\repos\ayaya_gui\out\build\x64-Debug\test && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test\edit_cache: phony test\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\zeqin\source\repos\ayaya_gui\out\build\x64-Debug\test && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\zeqin\source\repos\ayaya_gui -BC:\Users\zeqin\source\repos\ayaya_gui\out\build\x64-Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test\rebuild_cache: phony test\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
-build ayaya: phony ayaya_gui\ayaya.exe
+build ayaya_gui: phony ayaya_gui\ayaya_gui.lib
 
-build ayaya.exe: phony ayaya_gui\ayaya.exe
+build ayaya_gui.lib: phony ayaya_gui\ayaya_gui.lib
+
+build example: phony test\example.exe
+
+build example.exe: phony test\example.exe
 
 # =============================================================================
 # Folder targets.
@@ -138,14 +224,21 @@ build ayaya.exe: phony ayaya_gui\ayaya.exe
 #############################################
 # Folder: C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug
 
-build all: phony ayaya_gui\all
+build all: phony ayaya_gui\all test\all
 
 # =============================================================================
 
 #############################################
 # Folder: C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui
 
-build ayaya_gui\all: phony ayaya_gui\ayaya.exe
+build ayaya_gui\all: phony ayaya_gui\ayaya_gui.lib
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test
+
+build test\all: phony test\example.exe
 
 # =============================================================================
 # Built-in targets
@@ -154,14 +247,14 @@ build ayaya_gui\all: phony ayaya_gui\ayaya.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\ayaya_gui\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\skia\skiaConfig.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\ayaya_gui\CMakeLists.txt ..\..\..\test\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\skia\skiaConfig.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\ayaya_gui\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\skia\skiaConfig.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\ayaya_gui\CMakeLists.txt ..\..\..\test\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\share\skia\skiaConfig.cmake C$:\Users\zeqin\Documents\c_plus\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake: phony
 
 
 #############################################

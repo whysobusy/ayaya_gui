@@ -1,7 +1,6 @@
-#ifndef AYAYA
-#define AYAYA
+#pragma once
 
-namespace Ayaya {
+namespace ayaya {
 struct Color {
   static constexpr Color Red() { return Color(255, 0, 0); }
   static constexpr Color Green() { return Color(0, 255, 0); }
@@ -10,7 +9,8 @@ struct Color {
   static constexpr Color White() { return Color(255, 255, 255); }
 
   constexpr Color() = default;
-  constexpr Color(float red, float green, float blue, float alpha = 255);
+  constexpr Color::Color(float red, float green, float blue, float alpha = 255)
+      : red(red), green(green), blue(blue), alpha(alpha) {}
 
   float red = 0.0f;
   float green = 0.0f;
@@ -18,19 +18,16 @@ struct Color {
   float alpha = 0.0f;
 };
 
-constexpr bool operator==(Color& a, Color& b);
-constexpr bool operator!=(Color& a, Color& b);
+bool operator==(Color& a, Color& b);
+bool operator!=(Color& a, Color& b);
 
 // Inlines
-constexpr Color::Color(float red, float green, float blue, float alpha = 255)
-    : red(red), green(green), blue(blue), alpha(alpha) {}
-
-constexpr bool operator==(Color const& a, Color const& b) {
+inline bool operator==(Color const& a, Color const& b) {
   return (a.alpha == b.alpha) && (a.red == b.red) && (a.green == b.green) &&
          (a.blue == b.blue);
 }
 
-constexpr bool operator!=(Color const& a, Color const& b) { return !(a == b); }
-}  // namespace AYAYA
-
-#endif
+inline bool operator!=(Color const& a, Color const& b) {
+  return !(a == b);
+}
+}  // namespace ayaya

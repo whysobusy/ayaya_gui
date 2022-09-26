@@ -1,5 +1,8 @@
 C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/CMakeFiles/edit_cache.dir
 C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
 C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/CMakeFiles/edit_cache.dir
-C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/CMakeFiles/ayaya.dir
+C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/CMakeFiles/ayaya_gui.dir
 C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/ayaya_gui/CMakeFiles/rebuild_cache.dir
+C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test/CMakeFiles/example.dir
+C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test/CMakeFiles/edit_cache.dir
+C:/Users/zeqin/source/repos/ayaya_gui/out/build/x64-Debug/test/CMakeFiles/rebuild_cache.dir
