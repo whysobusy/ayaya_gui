@@ -5,9 +5,11 @@
 #include "skia/gpu/GrDirectContext.h"
 
 #include "app.h"
+#include "paint/canvas.h"
 #include "paint/color.h"
 #include "paint/key.h"
 #include "paint/point.h"
+#include "paint/rect.h"
 
 namespace ayaya {
 class Window {
@@ -18,8 +20,11 @@ class Window {
   Window(Window const&) = delete;
   Window& operator=(Window const&) = delete;
 
-  virtual void Draw();
+  virtual void Render();
+  virtual void Draw(Canvas& cnv);
   virtual void Key(KeyInfo const& k);
+  Point CursorPos() const;
+  Point Size() const;
   virtual void Close();
 
  private:
@@ -30,4 +35,9 @@ class Window {
   // TODO
   SkSurface* skSurface_;
 };
+
+inline Rect ViewBounds(Window const& window) {
+  auto size = window.Size();
+  return {0, 0, size.x, size.y};
+}
 }  // namespace ayaya

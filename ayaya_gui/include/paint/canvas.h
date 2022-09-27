@@ -34,6 +34,7 @@ class Canvas {
   void Scale(float x, float y);
   void Skew(double sx, double sy);
   Point DeviceToUser(Point p);
+  Rect DeviceToUser(Rect rect);
   Point UserToDevice(Point p);
 
   // Paths

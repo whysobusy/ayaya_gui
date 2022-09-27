@@ -6,6 +6,8 @@ namespace ayaya {
 struct Rect {
   constexpr Rect();
   constexpr Rect(float left, float top, float right, float bottom);
+  constexpr Rect(Point top_left, Point bottom_right)
+      : Rect(top_left.x, top_left.y, bottom_right.x, bottom_right.y) {}
   Rect(Rect const&) = default;
   Rect& operator=(Rect const&) = default;
 

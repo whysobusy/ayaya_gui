@@ -103,7 +103,7 @@ Canvas::Canvas(CanvasImpl* context)
 Canvas::~Canvas() {}
 
 void Canvas::PreScale(float sc) {
-  Scale(sc, sc);
+  context_->scale(sc, sc);
   state_->preScale_ = sc;
 }
 
@@ -135,6 +135,10 @@ Point Canvas::DeviceToUser(Point p) {
   SkPoint skp;
   mat.mapXY(p.x * scale, p.y * scale, &skp);
   return {skp.x(), skp.y()};
+}
+
+Rect Canvas::DeviceToUser(Rect rect) {
+  return {DeviceToUser(rect.TopLeft()), DeviceToUser(rect.BottomRight())};
 }
 
 Point Canvas::UserToDevice(Point p) {

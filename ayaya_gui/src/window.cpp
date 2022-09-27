@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <map>
+#include "paint/canvas.h"
 #include "skia/core/SkCanvas.h"
 #include "skia/core/SkColorSpace.h"
 #include "skia/core/SkSurface.h"
@@ -14,9 +15,9 @@
 namespace ayaya {
 extern std::map<GLFWwindow*, Window*> windows;
 
-void WindowRefresh(GLFWwindow* window) {
+void BeginFrame(GLFWwindow* window) {
   auto wp = static_cast<Window*>(glfwGetWindowUserPointer(window));
-  wp->Draw();
+  wp->Render();
 }
 
 GrDirectContext* sContext = nullptr;
@@ -82,7 +83,7 @@ Window::Window(char const* title,
   }
 
   glfwSetWindowUserPointer(window_, this);
-  glfwSetWindowRefreshCallback(window_, WindowRefresh);
+  glfwSetWindowRefreshCallback(window_, BeginFrame);
   glfwMakeContextCurrent(window_);
 
   // skia
@@ -102,7 +103,9 @@ Window::~Window() {
   glfwDestroyWindow(window_);
 }
 
-void Window::Draw() {
+void Window::Draw(Canvas& cnv) {}
+
+void Window::Render() {
   double mx, my;
   glfwGetCursorPos(window_, &mx, &my);
 
@@ -119,19 +122,43 @@ void Window::Draw() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
   // skia draw
-  SkCanvas* canvas =
-      sSurface->getCanvas();  // We don't manage this pointer's lifetime.
-  SkPaint paint;
-  paint.setColor(SK_ColorWHITE);
-  canvas->drawPaint(paint);
-  paint.setColor(SK_ColorBLUE);
-  canvas->drawRect({100, 200, 300, 500}, paint);
+  // SkCanvas* canvas =
+  //   sSurface->getCanvas();  // We don't manage this pointer's lifetime.
+  // SkPaint paint;
+  // paint.setColor(SK_ColorWHITE);
+  // canvas->drawPaint(paint);
+  // paint.setColor(SK_ColorBLUE);
+  // canvas->drawRect({100, 200, 300, 500}, paint);
+  // sContext->flush();
+
+  auto draw = [&](auto& _cnv) {
+    // TODO scale
+    auto cnv = Canvas{_cnv};
+    Draw(cnv);
+  };
+
+  SkCanvas* canvas = sSurface->getCanvas();
+  canvas->save();
+  draw(canvas);
+  canvas->restore();
   sContext->flush();
 
   glfwSwapBuffers(window_);
 }
 
 void Window::Key(KeyInfo const& k) {}
+
+Point Window::CursorPos() const {
+  double mx, my;
+  glfwGetCursorPos(window_, &mx, &my);
+  return {float(mx), float(my)};
+}
+
+Point Window::Size() const {
+  int width, height;
+  glfwGetWindowSize(window_, &width, &height);
+  return {float(width), float(height)};
+}
 
 void Window::Close() {}
 }  // namespace ayaya
