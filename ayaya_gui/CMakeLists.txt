@@ -5,12 +5,14 @@ cmake_minimum_required (VERSION 3.8)
 
 set(ayaya_sources
     src/paint/rect.cpp
+    src/paint/canvas.cpp
     src/window.cpp
     src/app.cpp
 )
 
 set(ayaya_headers
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/canvas.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/path.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/color.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/context.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/key.h

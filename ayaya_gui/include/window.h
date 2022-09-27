@@ -25,7 +25,9 @@ class Window {
  private:
   Color backGroundColor_;
   GLFWwindow* window_;
+  // TODO
   GrDirectContext* skContext_;
+  // TODO
   SkSurface* skSurface_;
 };
 }  // namespace ayaya

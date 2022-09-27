@@ -91,6 +91,15 @@ build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\rect.cpp.obj: CXX_COMPILER__a
   TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
   TARGET_PDB = ayaya_gui\ayaya_gui.pdb
 
+build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\canvas.cpp.obj: CXX_COMPILER__ayaya_gui_Debug ..\..\..\ayaya_gui\src\paint\canvas.cpp || cmake_object_order_depends_target_ayaya_gui
+  DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -I..\..\..\ayaya_gui\include -IC:\Users\zeqin\Documents\c_plus\vcpkg\installed\x64-windows\include
+  OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
+  OBJECT_FILE_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint
+  TARGET_COMPILE_PDB = ayaya_gui\CMakeFiles\ayaya_gui.dir\ayaya_gui.pdb
+  TARGET_PDB = ayaya_gui\ayaya_gui.pdb
+
 build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\window.cpp.obj: CXX_COMPILER__ayaya_gui_Debug ..\..\..\ayaya_gui\src\window.cpp || cmake_object_order_depends_target_ayaya_gui
   DEFINES = -DGLFW_DLL -DGR_TEST_UTILS=1 -DNOMINMAX -DSKIA_DLL -DSKIA_IMPLMENTATION=0 -DSKSL_ENABLE_TRACING -DSKVM_JIT_WHEN_POSSIBLE -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1 -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_ENABLE_ANDROID_UTILS -DSK_ENABLE_DUMP_GPU -DSK_ENABLE_PRECOMPILE -DSK_ENABLE_SKSL -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GAMMA_APPLY_TO_A8 -DSK_GL -DSK_HAS_ANDROID_CODEC -DSK_HAS_HEIF_LIBRARY -DSK_SUPPORT_GPU=1 -DSK_SUPPORT_PDF -DSK_SUPPORT_XPS -DSK_USE_LIBGIFCODEC -DSK_XML -DWIN32_LEAN_AND_MEAN
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
@@ -117,7 +126,7 @@ build ayaya_gui\CMakeFiles\ayaya_gui.dir\src\app.cpp.obj: CXX_COMPILER__ayaya_gu
 #############################################
 # Link the static library ayaya_gui\ayaya_gui.lib
 
-build ayaya_gui\ayaya_gui.lib: CXX_STATIC_LIBRARY_LINKER__ayaya_gui_Debug ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\rect.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\window.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\app.cpp.obj
+build ayaya_gui\ayaya_gui.lib: CXX_STATIC_LIBRARY_LINKER__ayaya_gui_Debug ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\rect.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\paint\canvas.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\window.cpp.obj ayaya_gui\CMakeFiles\ayaya_gui.dir\src\app.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = ayaya_gui\CMakeFiles\ayaya_gui.dir
