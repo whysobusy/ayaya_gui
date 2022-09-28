@@ -103,7 +103,11 @@ Window::~Window() {
   glfwDestroyWindow(window_);
 }
 
-void Window::Draw(Canvas& cnv) {}
+void Window::Draw(Canvas& cnv) {
+  auto size = Size();
+  Rect bounds = {0, 0, size.x, size.y};
+  // Context ctx{*this, cnv, , bounds};
+}
 
 void Window::Render() {
   double mx, my;

@@ -6,6 +6,10 @@ cmake_minimum_required (VERSION 3.8)
 set(ayaya_sources
     src/paint/rect.cpp
     src/paint/canvas.cpp
+    src/widget/widget.cpp
+    src/widget/composite.cpp
+    src/widget/layer.cpp
+    src/widget/basic.cpp
     src/window.cpp
     src/app.cpp
 )
@@ -19,6 +23,10 @@ set(ayaya_headers
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/point.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/rect.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/utils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/composite.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/basic.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/widget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/layer.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/app.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/window.h
 )

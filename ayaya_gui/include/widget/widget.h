@@ -1,5 +1,6 @@
 #pragma once
 
+#include "paint/context.h"
 #include "paint/key.h"
 #include "paint/rect.h"
 
@@ -11,6 +12,9 @@ namespace ayaya {
 // TODO
 class Widget : public std::enable_shared_from_this<Widget> {
  public:
+  using WidgetPtr = std::shared_ptr<Widget>;
+  using WidgetConstPtr = std::shared_ptr<Widget const>;
+
   Widget() {}
   virtual ~Widget() {}
 
@@ -21,10 +25,14 @@ class Widget : public std::enable_shared_from_this<Widget> {
 
   // render
   virtual Rect limits();
-  virtual void Draw(context const& ctx);
-  virtual void Layout(context const& ctx);
+  virtual void Draw(Context const& ctx);
+  virtual void Layout(Context const& ctx);
   // control
-  virtual Widget* HitTest(context const& ctx, point p);
-  virtual bool Key(context const& ctx, KeyInfo const& k);
+  virtual Widget* HitTest(Context const& ctx, Point p);
+  virtual bool Cursor(Context const& ctx, Point p);
+  virtual bool Key(Context const& ctx, KeyInfo const& k);
 };
+
+using WidgetPtr = std::shared_ptr<Widget>;
+using WidgetConstPtr = std::shared_ptr<Widget const>;
 }  // namespace ayaya
