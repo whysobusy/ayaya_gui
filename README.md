@@ -1,7 +1,7 @@
 # Ayaya GUI
 
 ## Introduction
-Ayaya GUI is a lightweight C++ GUI library.
+Ayaya GUI is a lightweight C++ GUI framework.
  - It is still in the early stage of development and a lot of things are expected to change.
 
 ## How to build
@@ -18,6 +18,11 @@ Dependencies:
 ```
 git clone https://github.com/whysobusy/ayaya_gui.git
 ```
+
+```
+vcpkg "@.\vcpkg_rf.txt"
+```
+
 ```
 cd ayaya_gui
 mkdir build
@@ -27,5 +32,5 @@ cmake ..//
 
 
 ## Credits
-[elements](https://github.com/cycfi/elements)
-[flutter engine](https://github.com/whysobusy/engine)
+ - [elements](https://github.com/cycfi/elements)
+ - [flutter engine](https://github.com/whysobusy/engine)
