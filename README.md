@@ -1,10 +1,8 @@
 # Ayaya GUI
-
-## Introduction
 Ayaya GUI is a lightweight C++ GUI framework.
  - It is still in the early stage of development and a lot of things are expected to change.
 
-## How to build
+## Setup and Installation
 Requirements:
  - A C++17 compiler
  - Git
@@ -14,7 +12,7 @@ Requirements:
 Dependencies:
  - Skia
  - GLFW
-
+## 
 Clone the repository
 ```
 git clone https://github.com/whysobusy/ayaya_gui.git
