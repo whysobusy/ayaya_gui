@@ -1,25 +1,33 @@
 #pragma once
 
 #include "paint/canvas.h"
-#include "widget/widget.h"
-#include "window.h"
 
 #include <functional>
 #include <string>
 
 namespace ayaya {
+class Window;
+class Widget;
+
+Point CursorPos(Window const& window);
+Rect ViewBounds(Window const& window);
+Point DeviceToUser(Point p, Canvas& cnv);
+Rect DeviceToUser(Rect const& r, Canvas& cnv);
+
 struct BasicContext {
   BasicContext(Window& window, Canvas& cnv) : window_(window), canvas_(cnv) {}
 
   BasicContext(BasicContext const&) = default;
   BasicContext& operator=(BasicContext const&) = delete;
 
-  Rect ViewBounds() const { return canvas_.DeviceToUser(ViewBounds(window_)); }
+  Rect ViewBounds() const {
+    return canvas_.DeviceToUser(ayaya::ViewBounds(window_));
+  }
 
-  Point cursor_pos() const { return canvas_.DeviceToUser(window_.CursorPos()); }
+  Point cursor_pos() const { return canvas_.DeviceToUser(CursorPos(window_)); }
 
-  Window& window_;
-  Canvas& canvas_;
+  ayaya::Window& window_;
+  ayaya::Canvas& canvas_;
 };
 
 class Context : public BasicContext {
@@ -37,7 +45,7 @@ class Context : public BasicContext {
         bounds_(_bounds) {}
 
   Context(class Window& _window,
-          class canvas& _canvas,
+          class Canvas& _canvas,
           Widget* _widget,
           Rect _bounds)
       : BasicContext(_window, _canvas),

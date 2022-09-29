@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <map>
 #include "paint/canvas.h"
+#include "paint/utils.h"
 #include "skia/core/SkCanvas.h"
 #include "skia/core/SkColorSpace.h"
 #include "skia/core/SkSurface.h"
@@ -103,10 +104,34 @@ Window::~Window() {
   glfwDestroyWindow(window_);
 }
 
-void Window::Draw(Canvas& cnv) {
+void Window::Draw(Canvas& cnv, int w_width, int w_height) {
+  BasicContext bctx{*this, cnv};
+  Rect limits = content.Limits(bctx);
+  if (limits != currentLimits_) {
+    currentLimits_ = limits;
+    glfwSetWindowSizeLimits(window_, limits.left, limits.top, limits.right,
+                            limits.bottom);
+    int w = w_width;
+    int h = w_height;
+    Clamp(w, limits.left, limits.right);
+    Clamp(h, limits.top, limits.bottom);
+
+    if ((w_width != w) || (w_height != h)) {
+      glfwSetWindowSize(window_, w, h);
+      return;  // return early to refresh/redraw window
+    }
+  }
+
   auto size = Size();
   Rect bounds = {0, 0, size.x, size.y};
-  // Context ctx{*this, cnv, , bounds};
+  Context ctx{*this, cnv, &content, bounds};
+
+  if (bounds != currentBounds_) {
+    currentBounds_ = bounds;
+    content.Layout(ctx);
+  }
+
+  content.Draw(ctx);
 }
 
 void Window::Render() {
@@ -138,7 +163,7 @@ void Window::Render() {
   auto draw = [&](auto& _cnv) {
     // TODO scale
     auto cnv = Canvas{_cnv};
-    Draw(cnv);
+    Draw(cnv, w_width, w_height);
   };
 
   SkCanvas* canvas = sSurface->getCanvas();

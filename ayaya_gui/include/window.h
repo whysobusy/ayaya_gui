@@ -10,6 +10,7 @@
 #include "paint/key.h"
 #include "paint/point.h"
 #include "paint/rect.h"
+#include "widget/layer.h"
 
 namespace ayaya {
 class Window {
@@ -21,20 +22,29 @@ class Window {
   Window& operator=(Window const&) = delete;
 
   virtual void Render();
-  virtual void Draw(Canvas& cnv);
+  virtual void Draw(Canvas& cnv, int width, int height);
   virtual void Key(KeyInfo const& k);
   Point CursorPos() const;
   Point Size() const;
   virtual void Close();
 
+  VectorComposite<Layer> content;
+
  private:
   Color backGroundColor_;
   GLFWwindow* window_;
+  Rect currentLimits_;
+  Rect currentBounds_;
   // TODO
   GrDirectContext* skContext_;
   // TODO
   SkSurface* skSurface_;
 };
+
+inline Point CursorPos(Window const& window)  // declared in context.hpp
+{
+  return window.CursorPos();
+}
 
 inline Rect ViewBounds(Window const& window) {
   auto size = window.Size();

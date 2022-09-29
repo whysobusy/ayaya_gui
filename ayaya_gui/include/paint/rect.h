@@ -41,21 +41,17 @@ struct Rect {
 // Utils
 bool IsValid(Rect r);
 bool IsSameSize(Rect a, Rect b);
-bool Intersects(Rect a, Rect b);
+bool Intersects(Rect const& a, Rect const& b);
 
 Point CenterPoint(Rect r);
 float Area(Rect r);
-Rect Max(Rect a, Rect b);
-Rect Min(Rect a, Rect b);
+Rect Max(Rect const& a, Rect const& b);
+Rect Min(Rect const& a, Rect const& b);
 
 void Clear(Rect& r);
-Rect Center(Rect r, Rect encl);
-Rect CenterH(Rect r, Rect encl);
-Rect CenterV(Rect r, Rect encl);
-Rect Align(Rect r, Rect encl, float x_align, float y_align);
-Rect AlignH(Rect r, Rect encl, float x_align);
-Rect AlignV(Rect r, Rect encl, float y_align);
-Rect Clip(Rect r, Rect encl);
+Rect& Center(Rect& r, Rect const& encl, bool h, bool v);
+Rect& Align(Rect& r, Rect const& encl, double x_align, double v_align);
+Rect& Clip(Rect& r, Rect const& encl);
 
 // Inlines
 inline constexpr Rect::Rect() : left(0), top(0), right(0), bottom(0) {}

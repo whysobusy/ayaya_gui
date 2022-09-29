@@ -1,9 +1,9 @@
 #pragma once
 
-#include "color.h"
-#include "path.h"
-#include "point.h"
-#include "rect.h"
+#include "paint/color.h"
+#include "paint/path.h"
+#include "paint/point.h"
+#include "paint/rect.h"
 
 #include <memory>
 #include <vector>
@@ -171,7 +171,7 @@ class Canvas {
     Canvas* cnv;
   };
 
-  State new_state() { return State{*this}; }
+  State NewState() { return State{*this}; }
   void Save();
   void Restore();
 
@@ -181,4 +181,23 @@ class Canvas {
   CanvasImpl* context_;
   std::unique_ptr<CanvasState> state_;
 };
+
+inline Canvas::State::State(Canvas& _cnv) : cnv(&_cnv) {
+  cnv->Save();
+}
+
+inline Canvas::State::State(State&& rhs) noexcept : cnv(rhs.cnv) {
+  rhs.cnv = 0;
+}
+
+inline Canvas::State::~State() {
+  if (cnv)
+    cnv->Restore();
+}
+
+inline Canvas::State& Canvas::State::operator=(State&& rhs) noexcept {
+  cnv = rhs.cnv;
+  rhs.cnv = 0;
+  return *this;
+}
 }  // namespace ayaya

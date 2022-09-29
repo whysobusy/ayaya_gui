@@ -24,7 +24,7 @@ class Widget : public std::enable_shared_from_this<Widget> {
   Widget& operator=(Widget const&) = default;
 
   // render
-  virtual Rect limits();
+  virtual Rect Limits(BasicContext const& ctx);
   virtual void Draw(Context const& ctx);
   virtual void Layout(Context const& ctx);
   // control
@@ -35,4 +35,10 @@ class Widget : public std::enable_shared_from_this<Widget> {
 
 using WidgetPtr = std::shared_ptr<Widget>;
 using WidgetConstPtr = std::shared_ptr<Widget const>;
+
+template <typename Widget>
+inline WidgetPtr New_(Widget&& w) {
+  using WidgetType = typename std::decay<Widget>::type;
+  return std::make_shared<WidgetType>(std::forward<Widget>(w));
+}
 }  // namespace ayaya

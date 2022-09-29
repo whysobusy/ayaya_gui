@@ -5,8 +5,8 @@
 
 namespace ayaya {
 constexpr float fullExtent = 1E6;
-constexpr Rect fullLimit = {0.0, 0.0, fullExtent, fullExtent};
-constexpr Rect EmptyLimit = {0.0, 0.0, 0.0, 0.0};
+constexpr Rect fullLimits = {0.0, 0.0, fullExtent, fullExtent};
+constexpr Rect EmptyLimits = {0.0, 0.0, 0.0, 0.0};
 constexpr Rect EmptyRect = {0.0, 0.0, 0.0, 0.0};
 
 template <typename T, typename U>
@@ -24,7 +24,7 @@ inline void ClampMin(T& val, U& const min) {
 }
 
 template <typename T, typename U, typename V>
-inline void Clamp(T& val, U& const min, U& const max) {
+inline void Clamp(T& val, U const& min, V const& max) {
   assert(min <= max);
   ClampMin(val, min);
   ClampMax(val, max);

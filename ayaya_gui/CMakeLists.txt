@@ -24,6 +24,7 @@ set(ayaya_headers
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/rect.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/paint/utils.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/composite.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/ref.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/basic.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/widget.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/widget/layer.h
