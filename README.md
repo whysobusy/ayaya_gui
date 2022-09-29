@@ -15,14 +15,15 @@ Dependencies:
  - Skia
  - GLFW
 
+Clone the repository
 ```
 git clone https://github.com/whysobusy/ayaya_gui.git
 ```
-
+Install the required libraries
 ```
 vcpkg "@.\vcpkg_rf.txt"
 ```
-
+Build the project
 ```
 cd ayaya_gui
 mkdir build
