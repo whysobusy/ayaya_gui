@@ -42,3 +42,6 @@
 2	510	6861253020506371	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/widget/composite.cpp.obj	a5f48ca1cd0479e6
 511	549	6861253020869031	ayaya_gui/ayaya_gui.lib	c3e6329ab6874c74
 549	1200	6861253021774460	test/example.exe	8614e76f0ddacb28
+2	628	6861255287912798	ayaya_gui/CMakeFiles/ayaya_gui.dir/src/widget/composite.cpp.obj	a5f48ca1cd0479e6
+629	666	6861255288281801	ayaya_gui/ayaya_gui.lib	c3e6329ab6874c74
+667	1345	6861255289259201	test/example.exe	8614e76f0ddacb28

@@ -13,6 +13,7 @@
 #include "skia/gpu/GrDirectContext.h"
 #include "skia/gpu/gl/GrGLInterface.h"
 
+// TODO: REFACTOR THE CODE!!!
 namespace ayaya {
 extern std::map<GLFWwindow*, Window*> windows;
 
