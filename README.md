@@ -1,5 +1,6 @@
 # Ayaya GUI
 Ayaya GUI is a lightweight C++ GUI framework.
+ - !!!Paused (I'm moving to Canada)
  - It is still in the early stage of development and a lot of things are expected to change.
 
 ## Setup and Installation
